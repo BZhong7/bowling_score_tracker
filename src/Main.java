@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String points;
 
-        while(scoreCalculator.getCurrentFrame() < 5) {
+        while(scoreCalculator.getCurrentFrame() < 10) {
             System.out.print("Enter a number or word(1-9, Strike, Spare, Miss): ");
             points = scanner.nextLine();
 
@@ -49,9 +49,7 @@ public class Main {
                         System.out.println("Inputted number exceeds number of remaining pins");
                     }
                 }
-                System.out.println(scoreCalculator.getCurrentFrame());
-                System.out.println(scoreCalculator.getIsFirstRoll());
-                scoreCalculator.printScoreArray();
+                scoreCalculator.printScoreboard();
             } catch (Exception e) {
                 System.out.println("Invalid input, try again. Words are case-sensitive");
             }
